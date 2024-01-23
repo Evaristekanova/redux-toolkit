@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export type Todo = {
     id: number;
-    title: string;
+    name: string;
     description: string;
     completed: boolean;
 }
