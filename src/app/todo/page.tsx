@@ -48,7 +48,7 @@ export default function Todo() {
   }
 
   return (
-    <section className='w-screen h-screen flex items-center'>
+    <section className='h-screen flex items-center'>
       <div className='w-[90vw] h-[90vh]  mx-auto py-3'>
         <div className='flex flex-row w-[90vw] gap-10 justify-center bg-gray-200 h-12 rounded-lg'>
           <button onClick={handleGetTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'All'? 'bg-gray-600 text-white':'')}`}>All</button>
@@ -62,7 +62,7 @@ export default function Todo() {
                 <input type='checkbox' className='mr-3' checked={todo.completed} />
                 <p>{todo.name}</p>
               </div>
-              <button className='bg-red-400 hover:bg-red-600 hover:text-white py-2 px-3 text-center rounded'>
+              <button className='bg-red-400 hover:bg-red-600 hover:text-white py-2 px-3 text-center rounded transition-all duration-75'>
                 Delete
               </button>
             </div>
