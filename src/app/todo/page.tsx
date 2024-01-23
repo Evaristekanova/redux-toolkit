@@ -51,9 +51,9 @@ export default function Todo() {
     <section className='w-screen h-screen flex items-center'>
       <div className='w-[90vw] h-[90vh]  mx-auto py-3'>
         <div className='flex flex-row w-[90vw] gap-10 justify-center bg-gray-200 h-12 rounded-lg'>
-          <button onClick={handleGetTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'All'? 'bg-gray-600':'')}`}>All</button>
-          <button onClick={handleGetCheckedTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'checked'? 'bg-gray-600':'')}`}>Checked</button>
-          <button onClick={handleGetUncheckedTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'unchecked'? 'bg-gray-600':'')}`}>Unchecked</button>
+          <button onClick={handleGetTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'All'? 'bg-gray-600 text-white':'')}`}>All</button>
+          <button onClick={handleGetCheckedTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'checked'? 'bg-gray-600 text-white':'')}`}>Checked</button>
+          <button onClick={handleGetUncheckedTodos} className={`bg-gray-300 hover:bg-gray-600 hover:text-white py-2 px-3 text-center rounded w-[20vw] ${(activeButton === 'unchecked'? 'bg-gray-600 text-white':'')}`}>Unchecked</button>
         </div>
         <div className="px-8">
         {todoState && todoState?.filter((todo: Todo) => filteredTodos ===null || todo.completed ===filteredTodos).map((todo: Todo) => (
